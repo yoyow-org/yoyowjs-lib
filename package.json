@@ -1,6 +1,6 @@
 {
   "name": "yoyowjs-lib",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Pure JavaScript yoyow library for node.js and browsers.",
   "browser": {
     "ws": false,
