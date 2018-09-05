@@ -1,0 +1,92 @@
+{
+  "name": "yoyowjs-lib",
+  "version": "0.0.2",
+  "description": "Pure JavaScript yoyow library for node.js and browsers.",
+  "browser": {
+    "ws": false,
+    "crypto": false
+  },
+  "config": {
+    "libdebug": true,
+    "wsdebug":false,
+    "serializerdump": false
+  },
+  "scripts": {
+    "test": "cross-env BABEL_ENV=test mocha --compilers js:babel-register --recursive",
+    "test:chain": "cross-env BABEL_ENV=test mocha --compilers js:babel-register ./test/chain --recursive",
+    "test:ecc": "cross-env BABEL_ENV=test mocha --compilers js:babel-register ./test/ecc --recursive",
+    "test:serializer": "cross-env BABEL_ENV=test mocha --compilers js:babel-register ./test/serializer --recursive",
+    "test:yoyow": "cross-env BABEL_ENV=test mocha --compilers js:babel-register ./test/yoyow --recursive",
+    "test:crypto": "cross-env BABEL_ENV=test mocha --compilers js:babel-register ./test/crypto --recursive",
+    "test:chainApi": "cross-env BABEL_ENV=test mocha -t 10000 --compilers js:babel-register ./test/yoyow/chainApi.test --recursive",
+    "test:content": "cross-env BABEL_ENV=test mocha -t 10000 --compilers js:babel-register ./test/yoyow/content --recursive",
+    "test:authority": "cross-env BABEL_ENV=test mocha -t 10000 --compilers js:babel-register ./test/yoyow/authority.test --recursive",
+    "test:post": "cross-env BABEL_ENV=test mocha -t 10000 --compilers js:babel-register ./test/yoyow/post.test --recursive",
+    "test:platform": "cross-env BABEL_ENV=test mocha -t 10000 --compilers js:babel-register ./test/yoyow/platform.test --recursive",
+    "test:assets": "cross-env BABEL_ENV=test mocha -t 10000 --compilers js:babel-register ./test/yoyow/assets.test --recursive",
+    "test:chainStore": "cross-env BABEL_ENV=test mocha -t 10000 --compilers js:babel-register ./test/yoyow/chainStore.test --recursive",
+    "test:watch": "npm test -- --watch",
+    "clean": "rimraf ./dist/* & rimraf ./build/* & rimraf ./es/*",
+    "prebuild": "npm run clean",
+    "build": "cross-env BABEL_ENV=cjs babel lib -d dist",
+    "build-es": "cross-env BABEL_ENV=es babel lib -d es",
+    "postbuild": "npm run build-es",
+    "build:watch": "babel lib -d dist --watch",
+    "prebrowserify": "rimraf ./build/*",
+    "browserify": "browserify --full-paths dist/browser.js --standalone yoyowJS -o build/yoyowjs-lib.js -d",
+    "postbrowserify": "uglifyjs --compress --mangle --sequences --drop_console --output build/yoyowjs-lib.min.js -- build/yoyowjs-lib.js",
+    "prepublish": "npm run build",
+    "prenodeify": "rimraf ./build/*",
+    "nodeify": "webpack --env.php=0 --progress --display-error-details --colors",
+    "prephpify": "rimraf ./build/*",
+    "phpify": "webpack --env.php --progress --display-error-details --colors",
+    "doc": "esdoc -c esdoc.json",
+    "example:chainStore": "babel-node examples/chainStore",
+    "example:transfer": "babel-node examples/transfer",
+    "example:privKey": "babel-node examples/privKey",
+    "example:createaccount": "babel-node examples/createaccount"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@demo.yoyow.org/yoyowjs-lib.git"
+  },
+  "author": "YOYOW Necklace (https://github.com/yoyow-org)",
+  "license": "BSD-2-Clause-FreeBSD",
+  "bugs": {
+    "url": "https://github.com/yoyow-org/yoyowjs-lib/issues"
+  },
+  "engines": {
+    "node": ">= 6.0.0"
+  },
+  "main": "./dist/index.js",
+  "jsnext:main": "./es/index.js",
+  "dependencies": {
+    "bigi": "^1.4.1",
+    "bs58": "^3.0.0",
+    "bytebuffer": "^5.0.0",
+    "create-hash": "^1.1.2",
+    "create-hmac": "^1.1.4",
+    "crypto-js": "^3.1.9-1",
+    "deep-equal": "^1.0.1",
+    "ecurve": "^1.0.2",
+    "event-emitter": "^0.3.4",
+    "immutable": "^3.7.6",
+    "secure-random": "^1.1.1",
+    "yoyowjs-ws": "git+ssh://git@demo.yoyow.org:yoyowjs-ws.git"
+  },
+  "devDependencies": {
+    "assert": "^1.3.0",
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.21.0",
+    "babel-eslint": "^7.1.1",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-1": "^6.16.0",
+    "browserify": "^13.1.0",
+    "cross-env": "^5.0.0",
+    "esdoc": "^0.4.3",
+    "mocha": "^3.2.0",
+    "uglifyjs": "^2.4.10",
+    "webpack": "^3.8.1"
+  }
+}

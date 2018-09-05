@@ -1,0 +1,9 @@
+.npmrc
+.idea
+npm-debug.log
+node_modules
+docs
+build
+.DS_Store
+package-lock.json
+test
