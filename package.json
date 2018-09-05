@@ -8,7 +8,7 @@
   },
   "config": {
     "libdebug": true,
-    "wsdebug":false,
+    "wsdebug": false,
     "serializerdump": false
   },
   "scripts": {
