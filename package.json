@@ -55,6 +55,7 @@
     "ecurve": "^1.0.2",
     "event-emitter": "^0.3.4",
     "immutable": "^3.7.6",
+    "randombytes": "^2.0.6",
     "secure-random": "^1.1.1",
     "yoyowjs-ws": "git+https://github.com/yoyow-org/yoyowjs-ws.git"
   },

@@ -6,5 +6,6 @@ module.exports = {
     hash: require("./ecc/src/hash"),
     TransactionBuilder: require("./chain/src/TransactionBuilder"),
     AccountUtils: require("./chain/src/AccountUtils"),
+    Aes: require("./ecc/src/aes"),
     yoyowWS: require("yoyowjs-ws")
 };
