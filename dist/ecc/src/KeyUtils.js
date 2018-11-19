@@ -28,26 +28,12 @@ var _secureRandom2 = _interopRequireDefault(_secureRandom);
 
 var _yoyowjsWs = require('yoyowjs-ws');
 
-var _assert = require('assert');
-
-var _assert2 = _interopRequireDefault(_assert);
-
-var _randombytes = require('randombytes');
-
-var _randombytes2 = _interopRequireDefault(_randombytes);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // hash for .25 second
 
 // import dictionary from './dictionary_en';
 var HASH_POWER_MILLS = 250;
-var entropyPos = 0,
-    entropyCount = 0;
-var externalEntropyArray = (0, _randombytes2.default)(101);
-var log2 = function log2(x) {
-    return Math.log(x) / Math.LN2;
-};
 
 var key = {
 
@@ -62,12 +48,10 @@ var key = {
     }
     */
     aes_checksum: function aes_checksum(password) {
-        var randomBuffer = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
-
         if (!(typeof password === "string")) {
             throw new Error("password string required");
         }
-        var salt = randomBuffer != null ? randomBuffer : _secureRandom2.default.randomBuffer(4).toString('hex');
+        var salt = _secureRandom2.default.randomBuffer(4).toString('hex');
         var iterations = 0;
         var secret = salt + password;
         // hash for .1 second
@@ -80,8 +64,7 @@ var key = {
         var checksum = _hash2.default.sha256(secret);
         var checksum_string = [iterations, salt.toString('hex'), checksum.slice(0, 4).toString('hex')].join(',');
 
-        return {
-            aes_private: _aes2.default.fromSeed(secret),
+        return { aes_private: _aes2.default.fromSeed(secret),
             checksum: checksum_string
         };
     },
@@ -115,7 +98,7 @@ var key = {
           @param1 string entropy of at least 32 bytes
     */
     random32ByteBuffer: function random32ByteBuffer() {
-        var entropy = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this.cpuEntropy();
+        var entropy = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this.browserEntropy();
         var randomBuffer = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
 
 
@@ -237,66 +220,6 @@ var key = {
         public_key.toAddressString(address_prefix) // bts_short, most recent format
         ];
         return address_string;
-    },
-
-
-    /**
-    This runs in just under 1 second and ensures a minimum of cpuEntropyBits
-    bits of entropy are gathered.
-      Based on more-entropy. @see https://github.com/keybase/more-entropy/blob/master/src/generator.iced
-      @arg {number} [cpuEntropyBits = 128]
-    @return {array} counts gathered by measuring variations in the CPU speed during floating point operations.
-    */
-    cpuEntropy: function cpuEntropy() {
-        var cpuEntropyBits = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 128;
-
-        var collected = [];
-        var lastCount = null;
-        var lowEntropySamples = 0;
-        while (collected.length < cpuEntropyBits) {
-            var count = this.floatingPointCount();
-            if (lastCount != null) {
-                var delta = count - lastCount;
-                if (Math.abs(delta) < 1) {
-                    lowEntropySamples++;
-                    continue;
-                }
-                // how many bits of entropy were in this sample
-                var bits = Math.floor(log2(Math.abs(delta)) + 1);
-                if (bits < 4) {
-                    if (bits < 2) {
-                        lowEntropySamples++;
-                    }
-                    continue;
-                }
-                collected.push(delta);
-            }
-            lastCount = count;
-        }
-        if (lowEntropySamples > 10) {
-            var pct = Number(lowEntropySamples / cpuEntropyBits * 100).toFixed(2);
-            // Is this algorithm getting inefficient?
-            console.warn('WARN: ' + pct + '% low CPU entropy re-sampled');
-        }
-        return collected;
-    },
-
-
-    /**
-        @private
-        Count while performing floating point operations during a fixed time
-        (7 ms for example).  Using a fixed time makes this algorithm
-        predictable in runtime.
-    */
-    floatingPointCount: function floatingPointCount() {
-        var workMinMs = 7;
-        var d = Date.now();
-        var i = 0,
-            x = 0;
-        while (Date.now() < d + workMinMs + 1) {
-            x = Math.sin(Math.sqrt(Math.log(++i + x)));
-        }
-        return i;
     }
 };
 
