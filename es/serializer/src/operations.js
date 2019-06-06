@@ -1909,7 +1909,7 @@ export const reward = new Serializer(
         platform: account_uid_type,                 // 平台账号
         poster: account_uid_type,
         post_pid: post_pid_type,
-        amount: share_type,
+        amount: asset,
         extensions: optional(future_extensions)
     }
 );
@@ -2019,6 +2019,7 @@ export const advertising_buy = new Serializer(
     "advertising_buy",
     {
         fee: fee,
+        advertising_order_oid:advertising_order_oid_type,
         from_account: account_uid_type,
         platform: account_uid_type,                 // 平台账号
         advertising_aid:advertising_aid_type ,
@@ -2037,7 +2038,7 @@ export const advertising_confirm = new Serializer(
         platform: account_uid_type,                 // 平台账号
         advertising_aid:advertising_aid_type ,
         advertising_order_oid:advertising_order_oid_type,
-        iscomfirm: bool,
+        isconfirm: bool,
         extensions: optional(future_extensions)
     }
 );
