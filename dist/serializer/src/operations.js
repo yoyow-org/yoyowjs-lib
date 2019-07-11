@@ -1,8 +1,8 @@
 "use strict";
 
 exports.__esModule = true;
-exports.stealth_memo_data = exports.signed_transaction = exports.transaction = exports.balance_claim = exports.withdraw_permission_claim = exports.account_update_allowed_assets = exports.account_enable_allowed_assets = exports.proposal_delete = exports.proposal_update = exports.proposal_create = exports.override_transfer = exports.asset_claim_fees = exports.asset_reserve = exports.asset_issue = exports.asset_update = exports.asset_create = exports.asset_create_option = exports.asset_options = exports.account_cancel_auth_platform = exports.account_auth_platform = undefined;
-exports.platform_vote_update = exports.platform_update = exports.platform_create = exports.post_update = exports.post = exports.witness_report = exports.witness_collect_pay = exports.witness_vote_update = exports.witness_update = exports.witness_create = exports.committee_proposal_update = exports.committee_proposal_create = exports.committee_update_global_parameter_item_type = exports.committee_update_fee_schedule_item_type = exports.committee_update_account_priviledge_item_type = exports.account_priviledge_update_options = exports.committee_member_vote_update = exports.committee_member_update = exports.committee_member_create = exports.csaf_lease = exports.csaf_collect = exports.account_update_proxy = exports.account_update_key = exports.account_update_auth = exports.account_manage = exports.account_manage_options = exports.account_create = exports.account_reg_info = exports.transfer = exports.transfer_option = exports.memo_data = exports.asset_settle_cancel = exports.transfer_from_blind = exports.blind_transfer = exports.blind_input = exports.transfer_to_blind = exports.blind_output = exports.stealth_confirmation = exports.assert = exports.block_id_predicate = exports.asset_symbol_eq_lit_predicate = exports.account_name_eq_lit_predicate = exports.custom = exports.vesting_balance_withdraw = exports.vesting_balance_create = exports.cdd_vesting_policy_initializer = exports.linear_vesting_policy_initializer = exports.committee_member_update_global_parameters = exports.chain_parameters = exports.withdraw_permission_delete = exports.withdraw_permission_update = exports.withdraw_permission_create = exports.op_wrapper = exports.bitasset_options = exports.price = exports.account_transfer = exports.account_upgrade = exports.account_whitelist = exports.account_update = exports.authority = exports.account_uid_auth = exports.signed_block_header = exports.block_header = exports.signed_block = exports.processed_transaction = exports.fee = exports.fee_extension = exports.asset = exports.void_result = exports.fee_schedule = exports.post_update_operation_fee_parameters = exports.post_operation_fee_parameters = exports.transfer_from_blind_operation_fee_parameters = exports.blind_transfer_operation_fee_parameters = exports.transfer_to_blind_operation_fee_parameters = exports.override_transfer_operation_fee_parameters = exports.balance_claim_operation_fee_parameters = exports.assert_operation_fee_parameters = exports.custom_operation_fee_parameters = exports.vesting_balance_withdraw_operation_fee_parameters = exports.vesting_balance_create_operation_fee_parameters = exports.committee_member_update_global_parameters_operation_fee_parameters = exports.committee_member_update_operation_fee_parameters = exports.committee_member_create_operation_fee_parameters = exports.withdraw_permission_delete_operation_fee_parameters = exports.withdraw_permission_claim_operation_fee_parameters = exports.withdraw_permission_update_operation_fee_parameters = exports.withdraw_permission_create_operation_fee_parameters = exports.proposal_delete_operation_fee_parameters = exports.proposal_update_operation_fee_parameters = exports.proposal_create_operation_fee_parameters = exports.witness_update_operation_fee_parameters = exports.witness_create_operation_fee_parameters = exports.account_transfer_operation_fee_parameters = exports.account_upgrade_operation_fee_parameters = exports.account_whitelist_operation_fee_parameters = exports.account_update_operation_fee_parameters = exports.account_create_operation_fee_parameters = exports.transfer_operation_fee_parameters = exports.operation = undefined;
+exports.stealth_memo_data = exports.signed_transaction = exports.transaction = exports.balance_claim = exports.withdraw_permission_claim = exports.advertising_ransom = exports.advertising_confirm = exports.advertising_buy = exports.advertising_update = exports.advertising_create = exports.custom_vote_cast = exports.custom_vote_create = exports.license_create = exports.buyout = exports.reward_proxy = exports.reward = exports.score_create = exports.account_update_allowed_assets = exports.account_enable_allowed_assets = exports.proposal_delete = exports.proposal_update = exports.proposal_create = exports.override_transfer = exports.asset_claim_fees = exports.asset_reserve = exports.asset_issue = exports.asset_update = exports.asset_create = exports.asset_create_option = exports.asset_options = exports.account_cancel_auth_platform = exports.account_auth_platform = exports.account_auth_platform_ext = exports.platform_vote_update = exports.platform_update = exports.platform_create = exports.post_update = exports.post = exports.post_update_extensions = exports.post_extensions = exports.Recerptor_Parameter = exports.witness_report = exports.witness_collect_pay = exports.witness_vote_update = exports.witness_update = exports.witness_create = exports.committee_proposal_update = exports.committee_proposal_create = undefined;
+exports.committee_update_global_parameter_item_type = exports.committee_update_fee_schedule_item_type = exports.committee_update_account_priviledge_item_type = exports.account_priviledge_update_options = exports.committee_member_vote_update = exports.committee_member_update = exports.committee_member_create = exports.csaf_lease = exports.csaf_collect = exports.account_update_proxy = exports.account_update_key = exports.account_update_auth = exports.account_manage = exports.account_manage_options = exports.account_create = exports.account_reg_info = exports.transfer = exports.transfer_option = exports.memo_data = exports.asset_settle_cancel = exports.transfer_from_blind = exports.blind_transfer = exports.blind_input = exports.transfer_to_blind = exports.blind_output = exports.stealth_confirmation = exports.assert = exports.block_id_predicate = exports.asset_symbol_eq_lit_predicate = exports.account_name_eq_lit_predicate = exports.custom = exports.vesting_balance_withdraw = exports.vesting_balance_create = exports.cdd_vesting_policy_initializer = exports.linear_vesting_policy_initializer = exports.committee_member_update_global_parameters = exports.chain_parameters = exports.withdraw_permission_delete = exports.withdraw_permission_update = exports.withdraw_permission_create = exports.op_wrapper = exports.bitasset_options = exports.price = exports.account_transfer = exports.account_upgrade = exports.account_whitelist = exports.account_update = exports.authority = exports.account_uid_auth = exports.signed_block_header = exports.block_header = exports.signed_block = exports.processed_transaction = exports.fee = exports.fee_extension = exports.asset = exports.void_result = exports.fee_schedule = exports.custom_vote_cast_operation_fee_parameters = exports.custom_vote_create_operation_fee_parameters = exports.advertising_ransom_operation_fee_parameters = exports.advertising_confirm_operation_fee_parameters = exports.advertising_buy_operation_fee_parameters = exports.advertising_update_operation_fee_parameters = exports.advertising_create_operation_fee_parameters = exports.license_create_operation_fee_parameters = exports.buyout_operation_fee_parameters = exports.reward_proxy_operation_fee_parameters = exports.reward_operation_fee_parameters = exports.score_create_operation_fee_parameters = exports.post_update_operation_fee_parameters = exports.post_operation_fee_parameters = exports.transfer_from_blind_operation_fee_parameters = exports.blind_transfer_operation_fee_parameters = exports.transfer_to_blind_operation_fee_parameters = exports.override_transfer_operation_fee_parameters = exports.balance_claim_operation_fee_parameters = exports.assert_operation_fee_parameters = exports.custom_operation_fee_parameters = exports.vesting_balance_withdraw_operation_fee_parameters = exports.vesting_balance_create_operation_fee_parameters = exports.committee_member_update_global_parameters_operation_fee_parameters = exports.committee_member_update_operation_fee_parameters = exports.committee_member_create_operation_fee_parameters = exports.withdraw_permission_delete_operation_fee_parameters = exports.withdraw_permission_claim_operation_fee_parameters = exports.withdraw_permission_update_operation_fee_parameters = exports.withdraw_permission_create_operation_fee_parameters = exports.proposal_delete_operation_fee_parameters = exports.proposal_update_operation_fee_parameters = exports.proposal_create_operation_fee_parameters = exports.witness_update_operation_fee_parameters = exports.witness_create_operation_fee_parameters = exports.account_transfer_operation_fee_parameters = exports.account_upgrade_operation_fee_parameters = exports.account_whitelist_operation_fee_parameters = exports.account_update_operation_fee_parameters = exports.account_create_operation_fee_parameters = exports.transfer_operation_fee_parameters = exports.operation = undefined;
 
 var _types = require("./types");
 
@@ -42,7 +42,11 @@ var uint8 = _types2.default.uint8,
     platform_pid_type = _types2.default.platform_pid_type,
     post_pid_type = _types2.default.post_pid_type,
     share_type = _types2.default.share_type,
-    asset_flags_type = _types2.default.asset_flags_type;
+    asset_flags_type = _types2.default.asset_flags_type,
+    license_lid_type = _types2.default.license_lid_type,
+    advertising_aid_type = _types2.default.advertising_aid_type,
+    advertising_order_oid_type = _types2.default.advertising_order_oid_type,
+    custom_vote_vid_type = _types2.default.custom_vote_vid_type;
 
 
 future_extensions = _types2.default.void;
@@ -52,6 +56,10 @@ platform_pid_type = uint32;
 post_pid_type = uint64;
 asset_flags_type = uint16;
 share_type = int64;
+license_lid_type = uint64;
+advertising_aid_type = uint64;
+advertising_order_oid_type = uint64;
+custom_vote_vid_type = uint64;
 
 /*
  When updating generated code
@@ -310,7 +318,103 @@ var post_update_operation_fee_parameters = exports.post_update_operation_fee_par
     extensions: optional(future_extensions)
 });
 
-var fee_parameters = static_variant([transfer_operation_fee_parameters, account_create_operation_fee_parameters, account_update_operation_fee_parameters, account_whitelist_operation_fee_parameters, account_upgrade_operation_fee_parameters, account_transfer_operation_fee_parameters, witness_create_operation_fee_parameters, witness_update_operation_fee_parameters, proposal_create_operation_fee_parameters, proposal_update_operation_fee_parameters, proposal_delete_operation_fee_parameters, withdraw_permission_create_operation_fee_parameters, withdraw_permission_update_operation_fee_parameters, withdraw_permission_claim_operation_fee_parameters, withdraw_permission_delete_operation_fee_parameters, committee_member_create_operation_fee_parameters, committee_member_update_operation_fee_parameters, committee_member_update_global_parameters_operation_fee_parameters, vesting_balance_create_operation_fee_parameters, vesting_balance_withdraw_operation_fee_parameters, custom_operation_fee_parameters, assert_operation_fee_parameters, balance_claim_operation_fee_parameters, override_transfer_operation_fee_parameters, transfer_to_blind_operation_fee_parameters, blind_transfer_operation_fee_parameters, transfer_from_blind_operation_fee_parameters, post_operation_fee_parameters, post_update_operation_fee_parameters]);
+var score_create_operation_fee_parameters = exports.score_create_operation_fee_parameters = new Serializer("score_create_operation_fee_parameters", {
+    fee: uint64,
+    price_per_output: uint32,
+    min_real_fee: uint64,
+    min_rf_percent: uint16,
+    extensions: optional(future_extensions)
+});
+
+var reward_operation_fee_parameters = exports.reward_operation_fee_parameters = new Serializer("reward_operation_fee_parameters", {
+    fee: uint64,
+    price_per_output: uint32,
+    min_real_fee: uint64,
+    min_rf_percent: uint16,
+    extensions: optional(future_extensions)
+});
+
+var reward_proxy_operation_fee_parameters = exports.reward_proxy_operation_fee_parameters = new Serializer("reward_proxy_operation_fee_parameters", {
+    fee: uint64,
+    price_per_output: uint32,
+    min_real_fee: uint64,
+    min_rf_percent: uint16,
+    extensions: optional(future_extensions)
+});
+
+var buyout_operation_fee_parameters = exports.buyout_operation_fee_parameters = new Serializer("buyout_operation_fee_parameters", {
+    fee: uint64,
+    price_per_output: uint32,
+    min_real_fee: uint64,
+    min_rf_percent: uint16,
+    extensions: optional(future_extensions)
+});
+
+var license_create_operation_fee_parameters = exports.license_create_operation_fee_parameters = new Serializer("license_create_operation_fee_parameters", {
+    fee: uint64,
+    price_per_output: uint32,
+    min_real_fee: uint64,
+    min_rf_percent: uint16,
+    extensions: optional(future_extensions)
+});
+
+var advertising_create_operation_fee_parameters = exports.advertising_create_operation_fee_parameters = new Serializer("advertising_create_operation_fee_parameters", {
+    fee: uint64,
+    price_per_output: uint32,
+    min_real_fee: uint64,
+    min_rf_percent: uint16,
+    extensions: optional(future_extensions)
+});
+
+var advertising_update_operation_fee_parameters = exports.advertising_update_operation_fee_parameters = new Serializer("advertising_update_operation_fee_parameters", {
+    fee: uint64,
+    price_per_output: uint32,
+    min_real_fee: uint64,
+    min_rf_percent: uint16,
+    extensions: optional(future_extensions)
+});
+
+var advertising_buy_operation_fee_parameters = exports.advertising_buy_operation_fee_parameters = new Serializer("advertising_buy_operation_fee_parameters", {
+    fee: uint64,
+    price_per_output: uint32,
+    min_real_fee: uint64,
+    min_rf_percent: uint16,
+    extensions: optional(future_extensions)
+});
+
+var advertising_confirm_operation_fee_parameters = exports.advertising_confirm_operation_fee_parameters = new Serializer("advertising_confirm_operation_fee_parameters", {
+    fee: uint64,
+    price_per_output: uint32,
+    min_real_fee: uint64,
+    min_rf_percent: uint16,
+    extensions: optional(future_extensions)
+});
+
+var advertising_ransom_operation_fee_parameters = exports.advertising_ransom_operation_fee_parameters = new Serializer("advertising_ransom_operation_fee_parameters", {
+    fee: uint64,
+    price_per_output: uint32,
+    min_real_fee: uint64,
+    min_rf_percent: uint16,
+    extensions: optional(future_extensions)
+});
+
+var custom_vote_create_operation_fee_parameters = exports.custom_vote_create_operation_fee_parameters = new Serializer("custom_vote_create_operation_fee_parameters", {
+    fee: uint64,
+    price_per_output: uint32,
+    min_real_fee: uint64,
+    min_rf_percent: uint16,
+    extensions: optional(future_extensions)
+});
+
+var custom_vote_cast_operation_fee_parameters = exports.custom_vote_cast_operation_fee_parameters = new Serializer("custom_vote_cast_operation_fee_parameters", {
+    fee: uint64,
+    price_per_output: uint32,
+    min_real_fee: uint64,
+    min_rf_percent: uint16,
+    extensions: optional(future_extensions)
+});
+
+var fee_parameters = static_variant([transfer_operation_fee_parameters, account_create_operation_fee_parameters, account_update_operation_fee_parameters, account_whitelist_operation_fee_parameters, account_upgrade_operation_fee_parameters, account_transfer_operation_fee_parameters, witness_create_operation_fee_parameters, witness_update_operation_fee_parameters, proposal_create_operation_fee_parameters, proposal_update_operation_fee_parameters, proposal_delete_operation_fee_parameters, withdraw_permission_create_operation_fee_parameters, withdraw_permission_update_operation_fee_parameters, withdraw_permission_claim_operation_fee_parameters, withdraw_permission_delete_operation_fee_parameters, committee_member_create_operation_fee_parameters, committee_member_update_operation_fee_parameters, committee_member_update_global_parameters_operation_fee_parameters, vesting_balance_create_operation_fee_parameters, vesting_balance_withdraw_operation_fee_parameters, custom_operation_fee_parameters, assert_operation_fee_parameters, balance_claim_operation_fee_parameters, override_transfer_operation_fee_parameters, transfer_to_blind_operation_fee_parameters, blind_transfer_operation_fee_parameters, transfer_from_blind_operation_fee_parameters, post_operation_fee_parameters, post_update_operation_fee_parameters, score_create_operation_fee_parameters, reward_operation_fee_parameters, reward_proxy_operation_fee_parameters, buyout_operation_fee_parameters, license_create_operation_fee_parameters, advertising_create_operation_fee_parameters, advertising_update_operation_fee_parameters, advertising_buy_operation_fee_parameters, advertising_confirm_operation_fee_parameters, advertising_ransom_operation_fee_parameters, custom_vote_create_operation_fee_parameters, custom_vote_cast_operation_fee_parameters]);
 
 var fee_schedule = exports.fee_schedule = new Serializer("fee_schedule", {
     parameters: set(fee_parameters),
@@ -656,7 +760,8 @@ var transfer_option = exports.transfer_option = new Serializer("transfer_option"
     from_balance: optional(asset), // 从余额转出金额
     from_prepaid: optional(asset), // 从零钱包转出金额
     to_balance: optional(asset), // 转入到余额
-    to_prepaid: optional(asset) // 转入到零钱包
+    to_prepaid: optional(asset), // 转入到零钱包
+    sign_platform: optional(account_uid_type) // sign by platform account
 });
 
 /**
@@ -690,7 +795,7 @@ var account_reg_info = exports.account_reg_info = new Serializer("account_reg_in
     allowance_per_article: asset, // 每文最低收入，文章收益低于此值无需分成
     max_share_per_article: asset, // 每篇文章最高分成金额
     max_share_total: asset, // 账号累积最高分成金额
-    buyout_percent: uint16, // 买断价比例（参照账号累积最高分成金额）。买断后不再分成。默认 100% 
+    buyout_percent: uint16, // 买断价比例（参照账号累积最高分成金额）。买断后不再分成。默认 100%
     extensions: optional(set(future_extensions)) // 扩展字段
 });
 
@@ -845,7 +950,7 @@ var committee_member_update = exports.committee_member_update = new Serializer("
 
 /**
  * TODO: op_type = 10      需要 active 权限
- * 理事会选举（投票） 
+ * 理事会选举（投票）
  * @type {Serializer}
  */
 var committee_member_vote_update = exports.committee_member_vote_update = new Serializer("committee_member_vote_update", {
@@ -1048,6 +1153,37 @@ var witness_report = exports.witness_report = new Serializer("witness_report", {
     extensions: optional(future_extensions) // 扩展字段
 });
 
+var Recerptor_Parameter = exports.Recerptor_Parameter = new Serializer("Recerptor_Parameter", {
+    cur_ratio: uint16,
+    to_buyout: bool,
+    buyout_ratio: uint16,
+    buyout_price: share_type,
+    buyout_expiration: time_point_sec,
+    extensions: optional(future_extensions) // 扩展字段
+});
+
+var post_extensions = exports.post_extensions = new Serializer("post_extensions", {
+    post_type: optional(uint8),
+    forward_price: optional(share_type),
+    license_lid: optional(license_lid_type),
+    permission_flags: optional(uint32),
+    receiptors: optional(map(account_uid_type, Recerptor_Parameter)),
+    sign_platform: optional(account_uid_type) // sign by platform account
+});
+
+var post_update_extensions = exports.post_update_extensions = new Serializer("post_update_extensions", {
+    forward_price: optional(share_type),
+    receiptors: optional(account_uid_type),
+    to_buyout: optional(bool),
+    buyout_ratio: optional(uint16),
+    buyout_price: optional(share_type),
+    buyout_expiration: optional(time_point_sec),
+    license_lid: optional(license_lid_type),
+    permission_flags: optional(uint32),
+    content_sign_platform: optional(account_uid_type), // sign by platform account
+    receiptor_sign_platform: optional(account_uid_type) // sign by platform account
+});
+
 /**
  * TODO: op_type = 18       需要平台账号和作者账号的 secondary 权限同时签名。(授权平台，让平台同时签名)
  * 发文章
@@ -1065,7 +1201,7 @@ var post = exports.post = new Serializer("post", {
     extra_data: string, // 帖子额外数据
     title: string, // 帖子标题
     body: string, // 帖子内容
-    extensions: optional(future_extensions) // 扩展字段
+    extensions: optional(extension(post_extensions)) // 扩展字段
 });
 
 /**
@@ -1082,7 +1218,7 @@ var post_update = exports.post_update = new Serializer("post_update", {
     extra_data: optional(string), // 帖子额外数据（可选）
     title: optional(string), // 帖子标题（可选）
     body: optional(string), // 帖子内容（可选）
-    extensions: optional(future_extensions) // 扩展字段
+    extensions: optional(extension(post_update_extensions)) // 扩展字段
 });
 
 /**
@@ -1134,14 +1270,21 @@ var platform_vote_update = exports.platform_vote_update = new Serializer("platfo
  * 授权平台
  * @type {Serializer}
  */
+
+var account_auth_platform_ext = exports.account_auth_platform_ext = new Serializer("account_auth_platform_ext", {
+    limit_for_platform: optional(share_type),
+    permission_flags: optional(uint32),
+    memo: optional(memo_data)
+});
+
 var account_auth_platform = exports.account_auth_platform = new Serializer("account_auth_platform", {
     fee: fee, // 手续费
     uid: account_uid_type, // 授权账户
     platform: account_uid_type, // 平台账户
-    extensions: optional(future_extensions) // 扩展字段
+    extensions: optional(extension(account_auth_platform_ext)) // 扩展字段
 });
 
-/** 
+/**
  * TODO: op_type = 24       需要 active 权限
  * 取消平台授权
  * @type {Serializer}
@@ -1175,7 +1318,7 @@ var asset_options = exports.asset_options = new Serializer("asset_options", {
     max_market_fee: int64, // 交易手续费最大值（预留字段，暂未使用，必须为 0 ）
     issuer_permissions: asset_flags_type, // 资产发行人权限集合（表示发行人是否有权修改 flags 字段中某些标志位）
     flags: asset_flags_type, // 资产参数集合
-    whitelist_authorities: set(account_uid_type), // 资产白名单管理员清单 
+    whitelist_authorities: set(account_uid_type), // 资产白名单管理员清单
     blacklist_authorities: set(account_uid_type), // 资产黑名单管理员清单
     whitelist_markets: set(asset_aid_type), // 交易对白名单（预留字段，暂未使用，必须为空）
     blacklist_markets: set(asset_aid_type), // 交易对黑名单（预留字段，暂未使用，必须为空）
@@ -1373,6 +1516,138 @@ var account_update_allowed_assets = exports.account_update_allowed_assets = new 
 
 // ======================================================================================================================================================================
 
+var score_create = exports.score_create = new Serializer("score_create", {
+    fee: fee,
+    from_account_uid: account_uid_type,
+    platform: account_uid_type, // 平台账号
+    poster: account_uid_type,
+    post_pid: post_pid_type,
+    score: uint8,
+    csaf: share_type,
+    sign_platform: optional(account_uid_type), // sign by platform account
+    extensions: optional(future_extensions)
+});
+
+var reward = exports.reward = new Serializer("reward", {
+    fee: fee,
+    from_account_uid: account_uid_type,
+    platform: account_uid_type, // 平台账号
+    poster: account_uid_type,
+    post_pid: post_pid_type,
+    amount: asset,
+    extensions: optional(future_extensions)
+});
+
+var reward_proxy = exports.reward_proxy = new Serializer("reward_proxy", {
+    fee: fee,
+    from_account_uid: account_uid_type,
+    platform: account_uid_type, // 平台账号
+    poster: account_uid_type,
+    post_pid: post_pid_type,
+    amount: share_type,
+    sign_platform: optional(account_uid_type), // sign by platform account
+    extensions: optional(future_extensions)
+});
+
+var buyout = exports.buyout = new Serializer("buyout", {
+    fee: fee,
+    from_account_uid: account_uid_type,
+    platform: account_uid_type, // 平台账号
+    poster: account_uid_type,
+    post_pid: post_pid_type,
+    receiptor_account_uid: account_uid_type,
+    sign_platform: optional(account_uid_type), // sign by platform account
+    extensions: optional(future_extensions)
+});
+
+var license_create = exports.license_create = new Serializer("license_create", {
+    fee: fee,
+    license_lid: license_lid_type,
+    platform: account_uid_type, // 平台账号
+    type: uint8,
+    hash_value: string,
+    extra_data: string,
+    title: string,
+    body: string,
+    extensions: optional(future_extensions)
+});
+
+var custom_vote_create = exports.custom_vote_create = new Serializer("custom_vote_create", {
+    fee: fee,
+    custom_vote_creater: account_uid_type,
+    vote_vid: custom_vote_vid_type,
+    title: string,
+    description: string,
+    vote_expired_time: time_point_sec,
+    vote_asset_id: asset_aid_type,
+    required_asset_amount: share_type,
+    minimum_selected_items: uint8,
+    maximum_selected_items: uint8,
+    options: array(string),
+    extensions: optional(future_extensions)
+});
+
+var custom_vote_cast = exports.custom_vote_cast = new Serializer("custom_vote_cast", {
+    fee: fee,
+    voter: account_uid_type,
+    custom_vote_creater: account_uid_type,
+    custom_vote_vid: custom_vote_vid_type,
+    vote_result: set(uint8),
+    extensions: optional(future_extensions)
+});
+
+var advertising_create = exports.advertising_create = new Serializer("advertising_create", {
+    fee: fee,
+    advertising_aid: advertising_aid_type,
+    platform: account_uid_type, // 平台账号
+    unit_time: optional(uint32),
+    unit_price: optional(share_type),
+    description: optional(string),
+    extensions: optional(future_extensions)
+});
+
+var advertising_update = exports.advertising_update = new Serializer("advertising_update", {
+    fee: fee,
+    platform: account_uid_type, // 平台账号
+    advertising_aid: advertising_aid_type,
+    description: optional(string),
+    unit_price: optional(share_type),
+    unit_time: optional(uint32),
+    on_sell: optional(bool),
+    extensions: optional(future_extensions)
+});
+
+var advertising_buy = exports.advertising_buy = new Serializer("advertising_buy", {
+    fee: fee,
+    advertising_order_oid: advertising_order_oid_type,
+    from_account: account_uid_type,
+    platform: account_uid_type, // 平台账号
+    advertising_aid: advertising_aid_type,
+    start_time: time_point_sec,
+    buy_number: uint32,
+    extra_data: string,
+    memo: optional(memo_data),
+    extensions: optional(future_extensions)
+});
+
+var advertising_confirm = exports.advertising_confirm = new Serializer("advertising_confirm", {
+    fee: fee,
+    platform: account_uid_type, // 平台账号
+    advertising_aid: advertising_aid_type,
+    advertising_order_oid: advertising_order_oid_type,
+    isconfirm: bool,
+    extensions: optional(future_extensions)
+});
+
+var advertising_ransom = exports.advertising_ransom = new Serializer("advertising_ransom", {
+    fee: fee,
+    from_account: account_uid_type,
+    platform: account_uid_type, // 平台账号
+    advertising_aid: advertising_aid_type,
+    advertising_order_oid: advertising_order_oid_type,
+    extensions: optional(future_extensions)
+});
+
 var withdraw_permission_claim = exports.withdraw_permission_claim = new Serializer("withdraw_permission_claim", {
     fee: fee,
     withdraw_permission: protocol_id_type("withdraw_permission"),
@@ -1425,11 +1700,25 @@ asset_issue, // 27 发行资产
 asset_reserve, // 28 销毁资产
 asset_claim_fees, // 29 提取资产在市场收取的费用
 override_transfer, // 30 资产所有者覆盖转账
-proposal_create, // 31 创建提案 （待完成）  
+proposal_create, // 31 创建提案 （待完成）
 proposal_update, // 32 修改提案 （待完成）
 proposal_delete, // 33 删除提案 （待完成）
 account_enable_allowed_assets, // 34 启用/停用账户端资产白名单
-account_update_allowed_assets];
+account_update_allowed_assets, // 35 更新账户端资产白名单
+account_whitelist, // 36 更新账号白名单
+score_create, //37 点赞
+reward, //38 打赏
+reward_proxy, //39 平台代理打赏
+buyout, //40 买断
+license_create, //41 创建许可
+advertising_create, //42 创建广告位
+advertising_update, //43 更新广告位
+advertising_buy, //44 购买广告位
+advertising_confirm, //45 确认/拒绝广告订单
+advertising_ransom, //46  广告订单过期,赎回资金
+custom_vote_create, //47 创建自定义广告
+custom_vote_cast //48 对自定义投票参与投票
+];
 
 var transaction = exports.transaction = new Serializer("transaction", {
     ref_block_num: uint16,

@@ -845,7 +845,7 @@ var ChainStore = function () {
             throw Error("argument is not uid: " + account_uid);
         }
         return new Promise(function (resolve, reject) {
-            _yoyowjsWs.Apis.instance().history_api().exec("get_relative_account_history", [account_uid, op_type, stop, limit, start]).then(function (history_objects) {
+            _yoyowjsWs.Apis.instance().history_api().exec("get_relative_account_history", [account_uid, op_type, start, limit, 0]).then(function (history_objects) {
                 if (history_objects) {
                     if (op_type == null) {
                         if (start == 0) {
