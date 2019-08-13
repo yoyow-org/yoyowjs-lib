@@ -2,6 +2,7 @@ import types from "./types";
 import SerializerImpl from "./serializer";
 
 var uint8 = types.uint8,
+    int8 = types.int8,
     uint16 = types.uint16,
     uint32 = types.uint32,
     int64 = types.int64,
@@ -1508,7 +1509,7 @@ export var score_create = new Serializer("score_create", {
     platform: account_uid_type, // 平台账号
     poster: account_uid_type,
     post_pid: post_pid_type,
-    score: uint8,
+    score: int8,
     csaf: share_type,
     sign_platform: optional(account_uid_type), // sign by platform account
     extensions: optional(future_extensions)
