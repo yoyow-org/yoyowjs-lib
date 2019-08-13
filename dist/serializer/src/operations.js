@@ -1522,7 +1522,7 @@ var score_create = exports.score_create = new Serializer("score_create", {
     platform: account_uid_type, // 平台账号
     poster: account_uid_type,
     post_pid: post_pid_type,
-    score: uint8,
+    score: init64,
     csaf: share_type,
     sign_platform: optional(account_uid_type), // sign by platform account
     extensions: optional(future_extensions)
