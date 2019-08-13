@@ -39,6 +39,33 @@ Types.uint8 = {
     }
 };
 
+var MIN_SIGNED_8 = -1 * Math.pow(2, 7);
+var MAX_SIGNED_8 = Math.pow(2, 7) - 1;
+
+Types.int8 = {
+    fromByteBuffer: function fromByteBuffer(b) {
+        return b.readInt8();
+    },
+    appendByteBuffer: function appendByteBuffer(b, object) {
+        v.require_range(MIN_SIGNED_8, MAX_SIGNED_8, object, 'int8 ' + object);
+        b.writeInt8(object);
+        return;
+    },
+    fromObject: function fromObject(object) {
+        v.require_range(MIN_SIGNED_8, MAX_SIGNED_8, object, 'int8 ' + object);
+        return object;
+    },
+    toObject: function toObject(object) {
+        var debug = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+        if (debug.use_default && object === undefined) {
+            return 0;
+        }
+        v.require_range(MIN_SIGNED_8, MAX_SIGNED_8, object, 'int8 ' + object);
+        return parseInt(object);
+    }
+};
+
 Types.uint16 = {
     fromByteBuffer: function fromByteBuffer(b) {
         return b.readUint16();
