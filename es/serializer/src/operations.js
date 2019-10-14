@@ -1587,9 +1587,9 @@ export var advertising_create = new Serializer("advertising_create", {
     fee: fee,
     advertising_aid: advertising_aid_type,
     platform: account_uid_type, // 平台账号
-    unit_time: optional(uint32),
-    unit_price: optional(share_type),
-    description: optional(string),
+    unit_time: uint32,
+    unit_price: share_type,
+    description: string,
     extensions: optional(future_extensions)
 });
 
