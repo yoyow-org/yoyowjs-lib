@@ -413,7 +413,7 @@ var custom_vote_cast_operation_fee_parameters = exports.custom_vote_cast_operati
     extensions: optional(future_extensions)
 });
 
-export var balance_lock_update_operation_fee_parameters = new Serializer("balance_lock_update_operation_fee_parameters", {
+var balance_lock_update_operation_fee_parameters = exports.balance_lock_update_operation_fee_parameters = new Serializer("balance_lock_update_operation_fee_parameters", {
     fee: uint64,
     min_real_fee: uint64,
     min_rf_percent: uint16,
@@ -1675,7 +1675,7 @@ var balance_claim = exports.balance_claim = new Serializer("balance_claim", {
     total_claimed: asset
 });
 
-export var balance_lock_update = new Serializer("balance_lock_update", {
+var balance_lock_update = exports.balance_lock_update = new Serializer("balance_lock_update", {
     fee: fee,
     account: account_uid_type,
     new_lock_balance: share_type,
