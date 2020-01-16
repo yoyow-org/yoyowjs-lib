@@ -97,7 +97,8 @@ ChainTypes.operations = {
     advertising_confirm: 45, //45 确认/拒绝广告订单
     advertising_ransom: 46, //46  广告订单过期,赎回资金
     custom_vote_create: 47, //47 创建自定义投票
-    custom_vote_cast: 48 //48 参与自定义投票
+    custom_vote_cast: 48, //48 参与自定义投票
+    balance_lock_update: 49 //49 锁仓
 };
 
 export default ChainTypes;
