@@ -1,7 +1,7 @@
 "use strict";
 
 exports.__esModule = true;
-exports.stealth_memo_data = exports.signed_transaction = exports.transaction = exports.balance_claim = exports.withdraw_permission_claim = exports.advertising_ransom = exports.advertising_confirm = exports.advertising_buy = exports.advertising_update = exports.advertising_create = exports.custom_vote_cast = exports.custom_vote_create = exports.license_create = exports.buyout = exports.reward_proxy = exports.reward = exports.score_create = exports.account_update_allowed_assets = exports.account_enable_allowed_assets = exports.proposal_delete = exports.proposal_update = exports.proposal_create = exports.override_transfer = exports.asset_claim_fees = exports.asset_reserve = exports.asset_issue = exports.asset_update = exports.asset_create = exports.asset_create_option = exports.asset_options = exports.account_cancel_auth_platform = exports.account_auth_platform = exports.account_auth_platform_ext = exports.platform_vote_update = exports.platform_update = exports.platform_create = exports.post_update = exports.post = exports.post_update_extensions = exports.post_extensions = exports.Recerptor_Parameter = exports.witness_report = exports.witness_collect_pay = exports.witness_vote_update = exports.witness_update = exports.witness_create = exports.committee_proposal_update = exports.committee_proposal_create = undefined;
+exports.stealth_memo_data = exports.signed_transaction = exports.transaction = exports.balance_claim = exports.withdraw_permission_claim = exports.advertising_ransom = exports.advertising_confirm = exports.advertising_buy = exports.advertising_update = exports.advertising_create = exports.custom_vote_cast = exports.custom_vote_create = exports.license_create = exports.buyout = exports.reward_proxy = exports.reward = exports.score_create = exports.account_update_allowed_assets = exports.account_enable_allowed_assets = exports.proposal_delete = exports.proposal_update = exports.proposal_create = exports.override_transfer = exports.asset_claim_fees = exports.asset_reserve = exports.asset_issue = exports.asset_update = exports.asset_create = exports.asset_create_option = exports.asset_options = exports.account_cancel_auth_platform = exports.account_auth_platform = exports.account_auth_platform_ext = exports.platform_vote_update = exports.platform_update = exports.platform_create = exports.post_update = exports.post = exports.post_update_extensions = exports.post_extensions = exports.Recerptor_Parameter = exports.witness_report = exports.witness_collect_pay = exports.witness_vote_update = exports.witness_update = exports.witness_create = exports.committee_proposal_update = exports.committee_proposal_create = exports.balance_lock_update = exports.balance_claim_operation_fee_parameters = undefined;
 exports.committee_update_global_parameter_item_type = exports.committee_update_fee_schedule_item_type = exports.committee_update_account_priviledge_item_type = exports.account_priviledge_update_options = exports.committee_member_vote_update = exports.committee_member_update = exports.committee_member_create = exports.csaf_lease = exports.csaf_collect = exports.account_update_proxy = exports.account_update_key = exports.account_update_auth = exports.account_manage = exports.account_manage_options = exports.account_create = exports.account_reg_info = exports.transfer = exports.transfer_option = exports.memo_data = exports.asset_settle_cancel = exports.transfer_from_blind = exports.blind_transfer = exports.blind_input = exports.transfer_to_blind = exports.blind_output = exports.stealth_confirmation = exports.assert = exports.block_id_predicate = exports.asset_symbol_eq_lit_predicate = exports.account_name_eq_lit_predicate = exports.custom = exports.vesting_balance_withdraw = exports.vesting_balance_create = exports.cdd_vesting_policy_initializer = exports.linear_vesting_policy_initializer = exports.committee_member_update_global_parameters = exports.chain_parameters = exports.withdraw_permission_delete = exports.withdraw_permission_update = exports.withdraw_permission_create = exports.op_wrapper = exports.bitasset_options = exports.price = exports.account_transfer = exports.account_upgrade = exports.account_whitelist = exports.account_update = exports.authority = exports.account_uid_auth = exports.signed_block_header = exports.block_header = exports.signed_block = exports.processed_transaction = exports.fee = exports.fee_extension = exports.asset = exports.void_result = exports.fee_schedule = exports.custom_vote_cast_operation_fee_parameters = exports.custom_vote_create_operation_fee_parameters = exports.advertising_ransom_operation_fee_parameters = exports.advertising_confirm_operation_fee_parameters = exports.advertising_buy_operation_fee_parameters = exports.advertising_update_operation_fee_parameters = exports.advertising_create_operation_fee_parameters = exports.license_create_operation_fee_parameters = exports.buyout_operation_fee_parameters = exports.reward_proxy_operation_fee_parameters = exports.reward_operation_fee_parameters = exports.score_create_operation_fee_parameters = exports.post_update_operation_fee_parameters = exports.post_operation_fee_parameters = exports.transfer_from_blind_operation_fee_parameters = exports.blind_transfer_operation_fee_parameters = exports.transfer_to_blind_operation_fee_parameters = exports.override_transfer_operation_fee_parameters = exports.balance_claim_operation_fee_parameters = exports.assert_operation_fee_parameters = exports.custom_operation_fee_parameters = exports.vesting_balance_withdraw_operation_fee_parameters = exports.vesting_balance_create_operation_fee_parameters = exports.committee_member_update_global_parameters_operation_fee_parameters = exports.committee_member_update_operation_fee_parameters = exports.committee_member_create_operation_fee_parameters = exports.withdraw_permission_delete_operation_fee_parameters = exports.withdraw_permission_claim_operation_fee_parameters = exports.withdraw_permission_update_operation_fee_parameters = exports.withdraw_permission_create_operation_fee_parameters = exports.proposal_delete_operation_fee_parameters = exports.proposal_update_operation_fee_parameters = exports.proposal_create_operation_fee_parameters = exports.witness_update_operation_fee_parameters = exports.witness_create_operation_fee_parameters = exports.account_transfer_operation_fee_parameters = exports.account_upgrade_operation_fee_parameters = exports.account_whitelist_operation_fee_parameters = exports.account_update_operation_fee_parameters = exports.account_create_operation_fee_parameters = exports.transfer_operation_fee_parameters = exports.operation = undefined;
 
 var _types = require("./types");
@@ -66,13 +66,11 @@ custom_vote_vid_type = uint64;
  When updating generated code
  Replace:  operation = static_variant [
  with:     operation.st_operations = [
-
  Delete:
  public_key = new Serializer(
  "public_key"
  key_data: bytes 33
  )
-
  */
 // Place-holder, their are dependencies on "operation" .. The final list of
 // operations is not avialble until the very end of the generated code.
@@ -415,7 +413,14 @@ var custom_vote_cast_operation_fee_parameters = exports.custom_vote_cast_operati
     extensions: optional(future_extensions)
 });
 
-var fee_parameters = static_variant([transfer_operation_fee_parameters, account_create_operation_fee_parameters, account_update_operation_fee_parameters, account_whitelist_operation_fee_parameters, account_upgrade_operation_fee_parameters, account_transfer_operation_fee_parameters, witness_create_operation_fee_parameters, witness_update_operation_fee_parameters, proposal_create_operation_fee_parameters, proposal_update_operation_fee_parameters, proposal_delete_operation_fee_parameters, withdraw_permission_create_operation_fee_parameters, withdraw_permission_update_operation_fee_parameters, withdraw_permission_claim_operation_fee_parameters, withdraw_permission_delete_operation_fee_parameters, committee_member_create_operation_fee_parameters, committee_member_update_operation_fee_parameters, committee_member_update_global_parameters_operation_fee_parameters, vesting_balance_create_operation_fee_parameters, vesting_balance_withdraw_operation_fee_parameters, custom_operation_fee_parameters, assert_operation_fee_parameters, balance_claim_operation_fee_parameters, override_transfer_operation_fee_parameters, transfer_to_blind_operation_fee_parameters, blind_transfer_operation_fee_parameters, transfer_from_blind_operation_fee_parameters, post_operation_fee_parameters, post_update_operation_fee_parameters, score_create_operation_fee_parameters, reward_operation_fee_parameters, reward_proxy_operation_fee_parameters, buyout_operation_fee_parameters, license_create_operation_fee_parameters, advertising_create_operation_fee_parameters, advertising_update_operation_fee_parameters, advertising_buy_operation_fee_parameters, advertising_confirm_operation_fee_parameters, advertising_ransom_operation_fee_parameters, custom_vote_create_operation_fee_parameters, custom_vote_cast_operation_fee_parameters]);
+var balance_lock_update_operation_fee_parameters = exports.balance_lock_update_operation_fee_parameters = new Serializer("balance_lock_update_operation_fee_parameters", {
+    fee: uint64,
+    min_real_fee: uint64,
+    min_rf_percent: uint16,
+    extensions: optional(future_extensions)
+});
+
+var fee_parameters = static_variant([transfer_operation_fee_parameters, account_create_operation_fee_parameters, account_update_operation_fee_parameters, account_whitelist_operation_fee_parameters, account_upgrade_operation_fee_parameters, account_transfer_operation_fee_parameters, witness_create_operation_fee_parameters, witness_update_operation_fee_parameters, proposal_create_operation_fee_parameters, proposal_update_operation_fee_parameters, proposal_delete_operation_fee_parameters, withdraw_permission_create_operation_fee_parameters, withdraw_permission_update_operation_fee_parameters, withdraw_permission_claim_operation_fee_parameters, withdraw_permission_delete_operation_fee_parameters, committee_member_create_operation_fee_parameters, committee_member_update_operation_fee_parameters, committee_member_update_global_parameters_operation_fee_parameters, vesting_balance_create_operation_fee_parameters, vesting_balance_withdraw_operation_fee_parameters, custom_operation_fee_parameters, assert_operation_fee_parameters, balance_claim_operation_fee_parameters, override_transfer_operation_fee_parameters, transfer_to_blind_operation_fee_parameters, blind_transfer_operation_fee_parameters, transfer_from_blind_operation_fee_parameters, post_operation_fee_parameters, post_update_operation_fee_parameters, score_create_operation_fee_parameters, reward_operation_fee_parameters, reward_proxy_operation_fee_parameters, buyout_operation_fee_parameters, license_create_operation_fee_parameters, advertising_create_operation_fee_parameters, advertising_update_operation_fee_parameters, advertising_buy_operation_fee_parameters, advertising_confirm_operation_fee_parameters, advertising_ransom_operation_fee_parameters, custom_vote_create_operation_fee_parameters, custom_vote_cast_operation_fee_parameters, balance_lock_update_operation_fee_parameters]);
 
 var fee_schedule = exports.fee_schedule = new Serializer("fee_schedule", {
     parameters: set(fee_parameters),
@@ -1670,6 +1675,13 @@ var balance_claim = exports.balance_claim = new Serializer("balance_claim", {
     total_claimed: asset
 });
 
+var balance_lock_update = exports.balance_lock_update = new Serializer("balance_lock_update", {
+    fee: fee,
+    account: account_uid_type,
+    new_lock_balance: share_type,
+    extensions: optional(future_extensions)
+});
+
 operation.st_operations = [transfer, // 0 转账
 account_create, // 1 注册新账户
 account_manage, // 2 账户管理（认证）
@@ -1718,7 +1730,8 @@ advertising_buy, //44 购买广告位
 advertising_confirm, //45 确认/拒绝广告订单
 advertising_ransom, //46  广告订单过期,赎回资金
 custom_vote_create, //47 创建自定义广告
-custom_vote_cast //48 对自定义投票参与投票
+custom_vote_cast, //48 对自定义投票参与投票
+balance_lock_update //49 锁仓
 ];
 
 var transaction = exports.transaction = new Serializer("transaction", {
