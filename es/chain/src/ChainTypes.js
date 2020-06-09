@@ -11,35 +11,43 @@ ChainTypes.object_type = {
     base: 1,
     account: 2,
     asset: 3,
-    force_settlement: 4,
-    committee_member: 5,
-    witness: 6,
-    limit_order: 7,
-    call_order: 8,
-    custom: 9,
-    proposal: 10,
-    operation_history: 11,
-    withdraw_permission: 12,
-    vesting_balance: 13,
-    worker: 14,
-    balance: 15
+    committee_member: 4,
+    witness: 5,
+    platform_object: 6,
+    post: 7,
+    committee_proposal: 8,
+    proposal: 9,
+    operation_history: 10,
+    active_post: 11,
+    limit_order: 12
 };
 
 ChainTypes.impl_object_type = {
     global_property: 0,
     dynamic_global_property: 1,
-    index_meta: 2,
-    asset_dynamic_data: 3,
+    asset_dynamic_data: 2,
     asset_bitasset_data: 4,
     account_balance: 5,
     account_statistics: 6,
-    transaction: 7,
-    block_summary: 8,
-    account_transaction_history: 9,
-    blinded_balance: 10,
-    chain_property: 11,
-    witness_schedule: 12,
-    budget_record: 13
+    voter: 7,
+    witness_vote: 8,
+    committee_member_vote: 9,
+    registrar_takeover: 10,
+    csaf_lease: 11,
+    transaction: 12,
+    block_summary: 13,
+    account_transaction_history: 14,
+    chain_property: 15,
+    platform_vote: 16,
+    score: 17,
+    license: 18,
+    advertising: 19,
+    advertising_order: 20,
+    custom_vote: 21,
+    cast_custom_vote: 22,
+    account_auth_platform: 23,
+    pledge_mining: 24,
+    pledge_balance: 25
 };
 
 ChainTypes.vote_type = {
@@ -80,7 +88,7 @@ ChainTypes.operations = {
     asset_reserve: 28, //销毁资产
     asset_claim_fees: 29, //提取资产在市场收取的费用
     override_transfer: 30, //资产所有者覆盖转账
-    proposal_create: 31, //创建提案 （待完成）  
+    proposal_create: 31, //创建提案 （待完成）
     proposal_update: 32, //修改提案 （待完成）
     proposal_delete: 33, //删除提案 （待完成）
     account_enable_allowed_assets: 34, //启用/停用账户端资产白名单
@@ -98,7 +106,16 @@ ChainTypes.operations = {
     advertising_ransom: 46, //46  广告订单过期,赎回资金
     custom_vote_create: 47, //47 创建自定义投票
     custom_vote_cast: 48, //48 参与自定义投票
-    balance_lock_update: 49 //49 锁仓
+    balance_lock_update: 49, //49 锁仓
+    pledge_mining_update: 50, //抵押挖矿更新
+    pledge_bonus_collect: 51, //收集抵押挖矿奖励
+    limit_order_create: 52, //创建交易挂单
+    limit_order_cancel: 53, //取消交易挂单,
+    fill_order: 54, // VIRTUAL
+    market_fee_collect: 55, //交易费用收集
+    score_bonus_collect: 56,
+    beneficiary_assign: 57,
+    benefit_collect: 58
 };
 
 export default ChainTypes;
