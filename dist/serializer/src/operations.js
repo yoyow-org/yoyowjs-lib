@@ -1,7 +1,7 @@
 "use strict";
 
 exports.__esModule = true;
-exports.stealth_memo_data = exports.signed_transaction = exports.transaction = exports.balance_claim = exports.benefit_collect = exports.beneficiary_assign = exports.score_bonus_collect = exports.market_fee_collect = exports.fill_order = exports.limit_order_cancel = exports.limit_order_create = exports.pledge_bonus_collect = exports.pledge_mining_update = exports.balance_lock_update = exports.custom_vote_cast = exports.custom_vote_create = exports.advertising_ransom = exports.advertising_confirm = exports.advertising_buy = exports.advertising_update = exports.advertising_create = exports.license_create = exports.buyout = exports.reward_proxy = exports.reward = exports.score_create = exports.account_update_allowed_assets = exports.account_enable_allowed_assets = exports.proposal_delete = exports.proposal_update = exports.proposal_create = exports.override_transfer = exports.asset_claim_fees = exports.asset_reserve = exports.asset_issue = exports.asset_update = exports.asset_create = exports.asset_create_option = exports.asset_options = exports.account_cancel_auth_platform = exports.account_auth_platform = exports.account_auth_platform_ext = exports.platform_vote_update = exports.platform_update = exports.platform_create = exports.post_update = exports.post = exports.post_update_extensions = exports.post_extensions = exports.Recerptor_Parameter = exports.witness_report = exports.witness_collect_pay = exports.witness_vote_update = exports.witness_update = exports.witness_create = exports.committee_proposal_update = exports.committee_proposal_create = exports.committee_update_global_parameter_item_type = exports.committee_update_fee_schedule_item_type = exports.committee_update_account_priviledge_item_type = exports.account_priviledge_update_options = exports.committee_member_vote_update = exports.committee_member_update = exports.committee_member_create = exports.csaf_lease = exports.csaf_collect = exports.account_update_proxy = exports.account_update_key = exports.account_update_auth = exports.account_manage = exports.account_manage_options = exports.account_create = exports.account_reg_info = exports.transfer = exports.transfer_option = undefined;
+exports.stealth_memo_data = exports.signed_transaction = exports.transaction = exports.balance_claim = exports.contract_call_operation = exports.contract_deploy_operation = exports.abi_def = exports.benefit_collect = exports.beneficiary_assign = exports.score_bonus_collect = exports.market_fee_collect = exports.fill_order = exports.limit_order_cancel = exports.limit_order_create = exports.pledge_bonus_collect = exports.pledge_mining_update = exports.balance_lock_update = exports.custom_vote_cast = exports.custom_vote_create = exports.advertising_ransom = exports.advertising_confirm = exports.advertising_buy = exports.advertising_update = exports.advertising_create = exports.license_create = exports.buyout = exports.reward_proxy = exports.reward = exports.score_create = exports.account_update_allowed_assets = exports.account_enable_allowed_assets = exports.proposal_delete = exports.proposal_update = exports.proposal_create = exports.override_transfer = exports.asset_claim_fees = exports.asset_reserve = exports.asset_issue = exports.asset_update = exports.asset_create = exports.asset_create_option = exports.asset_options = exports.account_cancel_auth_platform = exports.account_auth_platform = exports.account_auth_platform_ext = exports.platform_vote_update = exports.platform_update = exports.platform_create = exports.post_update = exports.post = exports.post_update_extensions = exports.post_extensions = exports.Recerptor_Parameter = exports.witness_report = exports.witness_collect_pay = exports.witness_vote_update = exports.witness_update = exports.witness_create = exports.committee_proposal_update = exports.committee_proposal_create = exports.committee_update_global_parameter_item_type = exports.committee_update_fee_schedule_item_type = exports.committee_update_account_priviledge_item_type = exports.account_priviledge_update_options = exports.committee_member_vote_update = exports.committee_member_update = exports.committee_member_create = exports.csaf_lease = exports.csaf_collect = exports.account_update_proxy = exports.account_update_key = exports.account_update_auth = exports.account_manage = exports.account_manage_options = exports.account_create = exports.account_reg_info = exports.transfer = exports.transfer_option = undefined;
 exports.memo_data = exports.asset_settle_cancel = exports.transfer_from_blind = exports.blind_transfer = exports.blind_input = exports.transfer_to_blind = exports.blind_output = exports.stealth_confirmation = exports.assert = exports.block_id_predicate = exports.asset_symbol_eq_lit_predicate = exports.account_name_eq_lit_predicate = exports.custom = exports.vesting_balance_withdraw = exports.vesting_balance_create = exports.cdd_vesting_policy_initializer = exports.linear_vesting_policy_initializer = exports.committee_member_update_global_parameters = exports.chain_parameters = exports.withdraw_permission_delete = exports.withdraw_permission_update = exports.withdraw_permission_create = exports.op_wrapper = exports.bitasset_options = exports.price = exports.account_transfer = exports.account_upgrade = exports.account_whitelist = exports.account_update = exports.authority = exports.account_uid_auth = exports.signed_block_header = exports.block_header = exports.signed_block = exports.processed_transaction = exports.fee = exports.fee_extension = exports.asset = exports.void_result = exports.fee_schedule = exports.benefit_collect_operation_fee_parameters = exports.beneficiary_assign_operation_fee_parameters = exports.score_bonus_collect_operation_fee_parameters = exports.market_fee_collect_operation_fee_parameters = exports.fill_order_operation_fee_parameters = exports.limit_order_cancel_operation_fee_parameters = exports.limit_order_create_operation_fee_parameters = exports.pledge_bonus_collect_operation_fee_parameters = exports.pledge_mining_update_operation_fee_parameters = exports.balance_lock_update_operation_fee_parameters = exports.custom_vote_cast_operation_fee_parameters = exports.custom_vote_create_operation_fee_parameters = exports.advertising_ransom_operation_fee_parameters = exports.advertising_confirm_operation_fee_parameters = exports.advertising_buy_operation_fee_parameters = exports.advertising_update_operation_fee_parameters = exports.advertising_create_operation_fee_parameters = exports.license_create_operation_fee_parameters = exports.buyout_operation_fee_parameters = exports.reward_proxy_operation_fee_parameters = exports.reward_operation_fee_parameters = exports.score_create_operation_fee_parameters = exports.account_whitelist_operation_fee_parameters = exports.account_update_allowed_assets_operation_fee_parameters = exports.account_enable_allowed_assets_operation_fee_parameters = exports.proposal_delete_operation_fee_parameters = exports.proposal_update_operation_fee_parameters = exports.proposal_create_operation_fee_parameters = exports.override_transfer_operation_fee_parameters = exports.asset_claim_fees_operation_fee_parameters = exports.asset_reserve_operation_fee_parameters = exports.asset_issue_operation_fee_parameters = exports.asset_update_operation_fee_parameters = exports.asset_create_operation_fee_parameters = exports.account_cancel_auth_platform_operation_fee_parameters = exports.account_auth_platform_operation_fee_parameters = exports.platform_vote_update_operation_fee_parameters = exports.platform_update_operation_fee_parameters = exports.platform_create_operation_fee_parameters = exports.post_update_operation_fee_parameters = exports.post_operation_fee_parameters = exports.witness_report_operation_fee_parameters = exports.witness_collect_pay_operation_fee_parameters = exports.witness_vote_update_operation_fee_parameters = exports.witness_update_operation_fee_parameters = exports.witness_create_operation_fee_parameters = exports.committee_proposal_update_operation_fee_parameters = exports.committee_proposal_create_operation_fee_parameters = exports.committee_member_vote_update_operation_fee_parameters = exports.committee_member_update_operation_fee_parameters = exports.committee_member_create_operation_fee_parameters = exports.csaf_lease_operation_fee_parameters = exports.csaf_collect_operation_fee_parameters = exports.account_update_proxy_operation_fee_parameters = exports.account_update_key_operation_fee_parameters = exports.account_update_auth_operation_fee_parameters = exports.account_manage_operation_fee_parameters = exports.account_create_operation_fee_parameters = exports.transfer_operation_fee_parameters = exports.operation = undefined;
 
 var _types = require("./types");
@@ -1866,6 +1866,73 @@ var benefit_collect = exports.benefit_collect = new Serializer("benefit_collect"
     time: optional(time_point_sec),
     extensions: optional(future_extensions)
 });
+
+/// contract
+
+var type_def = new Serializer("type_def", {
+    new_type_name: string,
+    type_name: string
+});
+
+var field_def = new Serializer('field_def', {
+    name: string,
+    type: string
+});
+
+var struct_def = new Serializer('struct_def', {
+    name: string,
+    type: string,
+    fields: static_variant(field_def)
+});
+
+var action_def = new Serializer('action_def', {
+    name: string,
+    type: string,
+    payable: bool
+});
+
+var table_def = new Serializer('table_def', {
+    name: string,
+    index_type: string,
+    key_names: static_variant(string),
+    key_types: static_variant(string),
+    type: string
+});
+
+var error_message = new Serializer('error_message', {
+    error_code: uint64,
+    error_msg: string
+});
+
+var abi_def = exports.abi_def = new Serializer('abi_def', {
+    version: string,
+    types: static_variant(type_def),
+    structs: static_variant(struct_def),
+    actions: static_variant(action_def),
+    tables: static_variant(table_def),
+    error_messages: static_variant(error_message),
+    abi_extensions: static_variant()
+});
+
+var contract_deploy_operation = exports.contract_deploy_operation = new Serializer("contract_deploy_operation", {
+    fee: fee,
+    contract_id: account_uid_type,
+    vm_type: string,
+    vm_version: string,
+    code: bytes,
+    abi: abi_def,
+    extensions: optional(future_extensions)
+});
+
+var contract_call_operation = exports.contract_call_operation = new Serializer("contract_call_operation", {
+    fee: fee,
+    account: account_uid_type,
+    contract_id: account_uid_type,
+    amount: optional(asset),
+    method_name: string,
+    data: bytes,
+    extensions: optional(future_extensions)
+});
 /**
  * 领取余额
  * @type {Serializer}
@@ -1927,7 +1994,18 @@ advertising_confirm, // 45 确认/拒绝广告订单
 advertising_ransom, // 46  广告订单过期,赎回资金
 custom_vote_create, // 47 创建自定义广告
 custom_vote_cast, // 48 对自定义投票参与投票
-balance_lock_update, pledge_mining_update, pledge_bonus_collect, limit_order_create, limit_order_cancel, fill_order, market_fee_collect, score_bonus_collect, beneficiary_assign, benefit_collect];
+balance_lock_update, // 49 更新锁仓
+pledge_mining_update, // 50 更新抵押挖矿
+pledge_bonus_collect, // 51 领取挖矿收益
+limit_order_create, // 52 创建限价单
+limit_order_cancel, // 53 取消限价单
+fill_order, // 54 
+market_fee_collect, // 55
+score_bonus_collect, // 56
+beneficiary_assign, // 57
+benefit_collect, // 58
+contract_deploy_operation, // 59 部署合约
+contract_call_operation];
 
 var transaction = exports.transaction = new Serializer("transaction", {
     ref_block_num: uint16,

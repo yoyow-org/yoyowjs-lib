@@ -115,7 +115,9 @@ ChainTypes.operations = {
     market_fee_collect: 55, //交易费用收集
     score_bonus_collect: 56,
     beneficiary_assign: 57,
-    benefit_collect: 58
+    benefit_collect: 58,
+    contract_deploy_operation: 59, //部署合约
+    contract_call_operation: 60 //调用合约
 };
 
 export default ChainTypes;

@@ -16,6 +16,7 @@ var uint8 = types.uint8,
     protocol_id_type = types.protocol_id_type,
     object_id_type = types.object_id_type,
     vote_id = types.vote_id,
+    name = types.name,
     future_extensions = types.future_extensions,
     static_variant = types.static_variant,
     map = types.map,
@@ -1852,6 +1853,73 @@ export var benefit_collect = new Serializer("benefit_collect", {
     time: optional(time_point_sec),
     extensions: optional(future_extensions)
 });
+
+/// contract
+
+var type_def = new Serializer("type_def", {
+    new_type_name: string,
+    type_name: string
+});
+
+var field_def = new Serializer('field_def', {
+    name: string,
+    type: string
+});
+
+var struct_def = new Serializer('struct_def', {
+    name: string,
+    type: string,
+    fields: static_variant(field_def)
+});
+
+var action_def = new Serializer('action_def', {
+    name: string,
+    type: string,
+    payable: bool
+});
+
+var table_def = new Serializer('table_def', {
+    name: string,
+    index_type: string,
+    key_names: static_variant(string),
+    key_types: static_variant(string),
+    type: string
+});
+
+var error_message = new Serializer('error_message', {
+    error_code: uint64,
+    error_msg: string
+});
+
+export var abi_def = new Serializer('abi_def', {
+    version: string,
+    types: static_variant(type_def),
+    structs: static_variant(struct_def),
+    actions: static_variant(action_def),
+    tables: static_variant(table_def),
+    error_messages: static_variant(error_message),
+    abi_extensions: static_variant()
+});
+
+export var contract_deploy_operation = new Serializer("contract_deploy_operation", {
+    fee: fee,
+    contract_id: account_uid_type,
+    vm_type: string,
+    vm_version: string,
+    code: bytes,
+    abi: abi_def,
+    extensions: optional(future_extensions)
+});
+
+export var contract_call_operation = new Serializer("contract_call_operation", {
+    fee: fee,
+    account: account_uid_type,
+    contract_id: account_uid_type,
+    amount: optional(asset),
+    method_name: name,
+    data: bytes(),
+    extensions: optional(future_extensions)
+});
 /**
  * 领取余额
  * @type {Serializer}
@@ -1913,7 +1981,18 @@ advertising_confirm, // 45 确认/拒绝广告订单
 advertising_ransom, // 46  广告订单过期,赎回资金
 custom_vote_create, // 47 创建自定义广告
 custom_vote_cast, // 48 对自定义投票参与投票
-balance_lock_update, pledge_mining_update, pledge_bonus_collect, limit_order_create, limit_order_cancel, fill_order, market_fee_collect, score_bonus_collect, beneficiary_assign, benefit_collect];
+balance_lock_update, // 49 更新锁仓
+pledge_mining_update, // 50 更新抵押挖矿
+pledge_bonus_collect, // 51 领取挖矿收益
+limit_order_create, // 52 创建限价单
+limit_order_cancel, // 53 取消限价单
+fill_order, // 54 
+market_fee_collect, // 55
+score_bonus_collect, // 56
+beneficiary_assign, // 57
+benefit_collect, // 58
+contract_deploy_operation, // 59 部署合约
+contract_call_operation];
 
 export var transaction = new Serializer("transaction", {
     ref_block_num: uint16,

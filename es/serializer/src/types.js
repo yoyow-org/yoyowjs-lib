@@ -4,6 +4,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 import v from './SerializerValidation';
 import fp from './FastParser';
+import Long from 'long';
 
 import ChainTypes from "../../chain/src/ChainTypes";
 import ObjectId from "../../chain/src/ObjectId";
@@ -1000,6 +1001,74 @@ Types.address = {
     },
     compare: function compare(a, b) {
         return strCmp(a.toString(), b.toString());
+    }
+};
+
+Types.name = {
+    charToSymbol: function charToSymbol(c) {
+        if (c.charCodeAt() >= 'a'.charCodeAt() && c.charCodeAt() <= 'z'.charCodeAt()) {
+            return c.charCodeAt() - 'a'.charCodeAt() + 6;
+        }
+        if (c.charCodeAt() >= '1'.charCodeAt() && c.charCodeAt() <= '5'.charCodeAt()) {
+            return c.charCodeAt() - '1'.charCodeAt() + 1;
+        }
+        return 0;
+    },
+    strToLong: function strToLong(s) {
+        //max length of a 'name' type
+        var max_name_length = 13;
+        var l = Long.fromNumber(0);
+        var i = 0;
+        for (; i < max_name_length - 1 && i < s.length; i++) {
+            l = l.or(Long.fromNumber(this.charToSymbol(s[i]) & 0x1f).shiftLeft(64 - 5 * (i + 1)));
+        }
+        if (i == max_name_length - 1) {
+            l = l.or(this.charToSymbol(s[max_name_length - 1]) & 0x0f);
+        }
+        return l;
+    },
+    trimRightIf: function trimRightIf(str, space) {
+        var end = 0;
+        for (var i = str.length - 1; i >= 0; i--) {
+            if (str[i] != space) {
+                end = i + 1;
+                break;
+            }
+        }
+        return str.substring(0, end);
+    },
+    longToString: function longToString(l) {
+        //max length of a 'name' type
+        var max_name_length = 13;
+        var char_map = ".12345abcdefghijklmnopqrstuvwxyz";
+        var chars = new Array(max_name_length);
+        chars.fill(char_map[0]);
+        var tmp = Long.fromValue(l);
+        for (var i = 0; i < max_name_length; ++i) {
+            var c = char_map[tmp.and(i == 0 ? 0x0f : 0x1f)];
+            chars[max_name_length - 1 - i] = c;
+            tmp = tmp.shiftRight(i == 0 ? 4 : 5);
+        }
+        return this.trimRightIf(chars.join(''), char_map[0]);
+    },
+    fromByteBuffer: function fromByteBuffer(b) {
+        return this.longToString(b.readInt64());
+    },
+    appendByteBuffer: function appendByteBuffer(b, object) {
+        var l = this.strToLong(object);
+        b.writeInt64(l);
+        return;
+    },
+    fromObject: function fromObject(object) {
+        return object;
+    },
+    toObject: function toObject(object) {
+        var debug = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+        if (debug.use_default && object === undefined) {
+            return "0";
+        }
+        return object;
     }
 };
 

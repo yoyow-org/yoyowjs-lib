@@ -5,12 +5,13 @@ import types from "./serializer/src/types";
 import * as ops from "./serializer/src/operations";
 import template from "./serializer/src/template";
 import SerializerValidation from "./serializer/src/SerializerValidation";
+import AbiSerializer from './serializer/src/abi_serializer';
 
 if (global && global["__LIB_DEBUG__"] == undefined) {
     global.__LIB_DEBUG__ = JSON.parse(process.env.npm_package_config_libdebug || false);
 }
 
-export { Serializer, fp, types, ops, template, SerializerValidation };
+export { Serializer, fp, types, ops, template, SerializerValidation, AbiSerializer };
 
 /* ECC */
 import Address from "./ecc/src/address";
