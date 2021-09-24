@@ -28,7 +28,8 @@
     "phpify": "webpack --env.php --progress --display-error-details --colors",
     "doc": "esdoc -c esdoc.json",
     "example:chainStore": "babel-node examples/chainStore",
-    "example:transfer": "babel-node examples/transfer"
+    "example:transfer": "babel-node examples/transfer",
+    "example:contract": "babel-node examples/contract_call"
   },
   "repository": {
     "type": "git",
