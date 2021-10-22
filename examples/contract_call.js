@@ -13,8 +13,10 @@ async function get_abi(){
   }
   throw `account ${contract_id} does not exists`
 }
-function generate_op_data(abi){
-  const as = new AbiSerializer(abi,1000000);
+async function generate_op_data(abi){
+  const parameters = await Apis.instance().db_api().exec("get_objects",[['2.0.0']]);
+  let trx_cpu_limit = parameters[0].parameters.extension_parameters.trx_cpu_limit;
+  const as = new AbiSerializer(abi,trx_cpu_limit);
   const data = as.encode(
     "transfer",
     {
@@ -50,7 +52,7 @@ Apis.instance("wss://api.testnet.yoyow.one", true)
     ChainStore.init().then(async () => {
       try{
         const abi = await get_abi();
-        const op_data = generate_op_data(abi);
+        const op_data = await generate_op_data(abi);
         const op = ops['contract_call_operation'].fromObject(op_data);
         console.log("op",op);
         await contract_call(op_data);
